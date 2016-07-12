@@ -381,7 +381,7 @@ define("lithe-localcache", function(require) {
                             storage.set(LCPREFIX + MANIFEST, JSON.stringify(localManifest));
                         }, splited);
                     };
-
+                    callbacks[comboUrl] = [cb];
                     LocalCache.doFetchModel(comboUrl, _comboCB);
                 }// isCombo
             } // js文件
